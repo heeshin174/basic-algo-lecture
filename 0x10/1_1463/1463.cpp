@@ -1,5 +1,8 @@
 // http://boj.kr/161694ef04f04d8dbe826e253622c1cb
 #include <bits/stdc++.h>
+// #include <iostream>
+// #include <algorithm>
+
 using namespace std;
 
 int d[1000005];
@@ -17,3 +20,4 @@ int main(void) {
   }
   cout << d[n];
 }
+
