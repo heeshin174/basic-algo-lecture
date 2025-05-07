@@ -2,9 +2,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int s[305];
+int score[305];
 int n;
-int d[305];
+int dp[305];
 
 int main(void){
   ios::sync_with_stdio(0);
@@ -12,16 +12,16 @@ int main(void){
   cin >> n;
   int tot = 0;
   for(int i = 1; i <= n; i++){
-    cin >> s[i];
-    tot += s[i];
+    cin >> score[i];
+    tot += score[i];
   }
   if(n <= 2){
     cout << tot;
     return 0;
   }
-  d[1] = s[1];
-  d[2] = s[2];
-  d[3] = s[3];
-  for(int i = 4; i <= n-1; i++) d[i] = min(d[i-2],d[i-3])+s[i];
-  cout << tot - min(d[n-1],d[n-2]);
+  dp[1] = score[1];
+  dp[2] = score[2];
+  dp[3] = score[3];
+  for(int i = 4; i <= n-1; i++) dp[i] = min(dp[i-2],dp[i-3])+score[i];
+  cout << tot - min(dp[n-1],dp[n-2]);
 }

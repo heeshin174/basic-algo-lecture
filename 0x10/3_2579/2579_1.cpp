@@ -1,27 +1,27 @@
-// http://boj.kr/2b21f929cae94416a00de3ed8c5417ff
 #include <bits/stdc++.h>
 using namespace std;
 
-int s[305];
+int score[305];
 int n;
-int d[305][3];
+int dp[305];
 
 int main(void){
   ios::sync_with_stdio(0);
   cin.tie(0);
   cin >> n;
-  for(int i = 1; i <= n; i++) cin >> s[i];
+  for(int i = 1; i <= n; i++) cin >> score[i];
   if(n == 1){
-    cout << s[1];
+    cout << score[1];
+    return 0;
+  } else if (n == 2) {
+    cout << score[1]+score[2];
     return 0;
   }
-  d[1][1] = s[1];
-  d[1][2] = 0;
-  d[2][1] = s[2];
-  d[2][2] = s[1]+s[2];
-  for(int i = 3; i <= n; i++){
-    d[i][1] = max(d[i-2][1],d[i-2][2])+s[i];
-    d[i][2] = d[i-1][1]+s[i];
+  dp[1] = score[1];
+  dp[2] = score[1]+score[2];
+  dp[3] = score[3]+max(score[1], score[2]);
+  for(int i = 4; i <= n; i++){
+    dp[i] = score[i]+max(dp[i-3]+score[i-1], dp[i-2]);
   }
-  cout << max(d[n][1],d[n][2]);
+  cout << dp[n];
 }
