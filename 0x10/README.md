@@ -1,4 +1,4 @@
-# Dynamic Programming (DP)
+# [Dynamic Programming (DP)](../workbook/0x10.md)
 
 동적 계획법(Dynamic Programming, DP)은 복잡한 문제를 작은 하위 문제(subproblem)들로 나누어 풀고, 이 하위 문제들의 해결 결과를 저장해 두었다가 같은 하위 문제가 다시 나타날 때 저장된 결과를 재활용하여 전체 문제의 해결 속도를 비약적으로 높이는 알고리즘 설계 기법입니다.
 
@@ -25,14 +25,14 @@
 
 **왜 사용하나요?**
 
-* **압도적인 효율성:** 겹치는 하위 문제가 많은 문제의 경우, 동적 계획법을 사용하면 계산 횟수를 크게 줄여 보통 지수 시간 복잡도(Exponential time complexity) 문제를 다항 시간 복잡도(Polynomial time complexity) 문제로 개선할 수 있습니다.
+- **압도적인 효율성:** 겹치는 하위 문제가 많은 문제의 경우, 동적 계획법을 사용하면 계산 횟수를 크게 줄여 보통 지수 시간 복잡도(Exponential time complexity) 문제를 다항 시간 복잡도(Polynomial time complexity) 문제로 개선할 수 있습니다.
 
 **대표적인 동적 계획법 문제 예시:**
 
-* 피보나치 수열 계산
-* 배낭 문제 (Knapsack Problem)
-* 최장 공통 부분 수열 (Longest Common Subsequence)
-* 행렬 곱셈 순서 (Matrix Chain Multiplication)
-* 그리고 이전 질문에서 다룬 **"1, 2, 3 더하기" 문제**도 대표적인 DP 문제입니다. (dp[i] = dp[i-1] + dp[i-2] + dp[i-3] 점화식 사용)
+- 피보나치 수열 계산
+- 배낭 문제 (Knapsack Problem)
+- 최장 공통 부분 수열 (Longest Common Subsequence)
+- 행렬 곱셈 순서 (Matrix Chain Multiplication)
+- 그리고 이전 질문에서 다룬 **"1, 2, 3 더하기" 문제**도 대표적인 DP 문제입니다. (dp[i] = dp[i-1] + dp[i-2] + dp[i-3] 점화식 사용)
 
 요약하자면, 동적 계획법은 문제를 쪼개고 겹치는 부분을 한 번만 계산해서 효율적으로 문제를 해결하는 방법입니다. 특히 재귀적으로 표현될 수 있고 겹치는 하위 문제가 많이 발생하는 문제에 강력합니다.
