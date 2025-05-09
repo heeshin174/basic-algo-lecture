@@ -2,7 +2,8 @@
 
 ![100%](https://progress-bar.xyz/17/?scale=25&title=progress&width=500&color=babaca&suffix=/25)
 
-[문제집 링크](https://www.acmicpc.net/workbook/view/23049)
+- [문제집 링크](../workbook.md)
+- [백준문제집 링크](https://www.acmicpc.net/workbook/view/23049)
 
 | 문제 분류 | 문제 | 문제 제목 | 정답 코드 |
 | :--: | :--: | :--: | :--: |
