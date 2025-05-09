@@ -1,4 +1,3 @@
-// http://boj.kr/7df92c8710f24a799c1f862fc4cc9269
 #include <bits/stdc++.h>
 using namespace std;
 
