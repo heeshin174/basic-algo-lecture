@@ -1,13 +1,10 @@
 import sys
 from collections import deque
 
-# Faster input reading
 input = sys.stdin.readline
 
-# Read grid dimensions
 n, m = map(int, input().split())
 
-# Read the grid
 graph = []
 for _ in range(n):
     # Read each row, split by space, convert to integers, and store as a list
@@ -15,7 +12,6 @@ for _ in range(n):
 
 visited = [[False] * m for _ in range(n)]
 
-# Directions for moving (left, right, up, down)
 dx = [0, 0, -1, 1]
 dy = [-1, 1, 0, 0]
 
@@ -42,7 +38,7 @@ for i in range(n):
             for k in range(4):
                 nx = x + dx[k]
                 ny = y + dy[k]
-                if nx<0 or nx>=n or ny<0  or ny>=m: continue
+                if nx<0 or nx>=n or ny<0 or ny>=m: continue
                 if graph[nx][ny] != 1 or visited[nx][ny]: continue
                 visited[nx][ny] = True
                 queue.append((nx, ny))
