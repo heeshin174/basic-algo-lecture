@@ -1,4 +1,4 @@
-# 재귀 (Recursion)
+# [재귀 (Recursion)](../workbook/0x0B.md)
 
 재귀 함수는 함수가 자기 자신을 호출하는 함수를 의미합니다.
 
